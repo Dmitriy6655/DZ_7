@@ -167,7 +167,7 @@ public static class Helper
                 {
                     statusNum = true;
                     //суммируем все строки с найденными индексами в одну строку
-                    result = result + string.Format("\n {0}, {1} (line, column), {2};", i, j, statusNum);
+                    result = result + string.Format("\n {0}, {1} (line, column);", i, j);
 
                 }
 
