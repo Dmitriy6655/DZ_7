@@ -17,8 +17,12 @@ int line = int.Parse(Console.ReadLine());
 Console.Write("Enter the size column (n): ");
 int column = int.Parse(Console.ReadLine());
 
+
+
 int[,] arrayInt = new int[line, column];
+
 int[,] arrayResult = RandomArrayInt(arrayInt);
+
 PrintResultArrayInt(arrayResult);
 
 Console.Write("Enter any number: ");
@@ -32,46 +36,16 @@ if (!num)
 }
 
 //создаем заполненный массив
+
 SearchIndexNumber(N, arrayResult);
 
 
 //создаем новую строку с данными полученными от метода SearchIndexNumber
+
 (string, bool) result2 = SearchIndexNumber(N, arrayResult);
 
 //передаем переменную типа int(число N), 
 //переменную типа string(result), переменную типа bool (statusNum)
 // в метод PrintResult для вывода(печати) в консоль
 PrintResultIndexNumInArray(N, result2.Item1, result2.Item2);
-
-
-// (string, bool) SearchIndexNumber(int N, int[,] arrayResult)
-// {
-
-//     string result = String.Empty;
-//     bool statusNum = false;
-//     int count = 1;
-
-
-//     for (var i = 0; i < arrayResult.GetLength(0); i++)
-//     {
-//         for (var j = 0; j < arrayResult.GetLength(1); j++)
-//         {
-//             if (arrayResult[i, j] == N)
-//             {
-//                 //суммируем все строки с найденными индексами в одну строку
-//                 result = result + string.Format("\n {0}, {1} (line, column);", i, j);
-
-
-
-//             }
-//             if (count > 0)
-//             {
-//                 statusNum = true;
-//             }
-
-//         }
-//     }
-
-//     return (result, statusNum);
-// }
 

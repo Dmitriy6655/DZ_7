@@ -11,6 +11,7 @@ using static Common.Helper;
 
 Console.Write("enter the size line (m): ");
 int line = int.Parse(Console.ReadLine());
+
 Console.Write("enter the size column (n): ");
 int column = int.Parse(Console.ReadLine());
 
